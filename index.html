@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+	<head>
+		<title> Check Box Challenge </title>
+		<script type="text/javascript">
+            function change()
+            {
+                checked1 = document.getElementById("box1").checked;
+                checked2 = document.getElementById("box2").checked;
+                checked3 = document.getElementById("box3").checked;
+                checked4 = document.getElementById("box4").checked;
+                if (document.getElementById("boxAll").checked){
+                    document.getElementById("newTxt").innerHTML = '<input type="checkbox" name="boxAll" id="boxAll" onclick="change()" checked> Uncheck All<br><input type="checkbox" name="box1" id="box1" checked> Check 1<br><input type="checkbox" name="box2" id="box2" checked> Check 2<br><input type="checkbox" name="box3" id="box3" checked> Check 3<br><input type="checkbox" name="box4" id="box4" checked> Check 4<br>'
+                }
+                if (!document.getElementById("boxAll").checked){
+                    document.getElementById("newTxt").innerHTML = '<input type="checkbox" name="boxAll" id="boxAll" onclick="change()"> Check All<br><input type="checkbox" name="box1" id="box1"> Check 1<br><input type="checkbox" name="box2" id="box2"> Check 2<br><input type="checkbox" name="box3" id="box3"> Check 3<br><input type="checkbox" name="box4" id="box4"> Check 4<br>'
+                }
+            }
+        </script>
+	</head>
+	<body>
+		<header>	
+		</header>
+		<br>
+		<form>
+            <div id="newTxt", name="newTxt">
+                <input type="checkbox" name="boxAll" id="boxAll" onclick="change()"> Check All<br>
+                <input type="checkbox" name="box1" id="box1"> Check 1<br>
+                <input type="checkbox" name="box2" id="box2"> Check 2<br>
+                <input type="checkbox" name="box3" id="box3"> Check 3<br>
+                <input type="checkbox" name="box4" id="box4"> Check 4<br>
+            </div>
+        </form>
+    </body>	
+</html>
